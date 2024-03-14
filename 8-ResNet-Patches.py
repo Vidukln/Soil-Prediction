@@ -14,7 +14,7 @@ def load_images(data, patches_folder):
     images = []
     for patch_name in data['Patch_Name']:
         img_path = os.path.join(patches_folder, patch_name)
-        img = load_img(img_path, target_size=(224, 224))  # Adjust target_size as needed
+        img = load_img(img_path, target_size=(224, 224))  
         img_array = img_to_array(img)
         images.append(img_array)
     return np.array(images)
@@ -80,13 +80,10 @@ model = Sequential([
     Dense(1)
 ])
 
-#Compile the model with a smaller learning rate
 model.compile(optimizer=Adam(lr=0.0001), loss='mean_squared_error', metrics=['mae'])
 
-#Train the model with more epochs
 history = model.fit(train_generator, epochs=10, validation_data=val_generator)
 
-#Evaluate the model
 loss, mae = model.evaluate(val_generator)
 print("Validation Loss:", loss)
 print("Validation MAE:", mae)
