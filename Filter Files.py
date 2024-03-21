@@ -25,10 +25,10 @@ def filter_and_copy_images(source_dir, dest_dir, image_names):
     for root, dirs, files in os.walk(source_dir):
         for file in files:
             if file.endswith(tuple(image_names)):
-                # Construct source and destination paths
+                #Construct source and destination paths
                 src_path = os.path.join(root, file)
                 dest_path = os.path.join(dest_dir, file)
-                # Copy the file to the destination directory
+                #Copy the file to the destination directory
                 shutil.copy(src_path, dest_path)
 
 #Filter and copy images for train data
