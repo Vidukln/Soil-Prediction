@@ -53,7 +53,7 @@ try:
 
     #Loop through all images in the image folder
     for filename in os.listdir(image_folder):
-        if filename.endswith(".png"):  # Adjust file extensions as needed
+        if filename.endswith(".png"):
             #Load the image
             image_path = os.path.join(image_folder, filename)
             image = np.array(Image.open(image_path))
