@@ -10,4 +10,11 @@ https://www.tensorflow.org/api_docs/python/tf/all_symbols
 https://scikit-learn.org/stable/
 https://pillow.readthedocs.io/en/stable/
 
-##Ima
+# Images
+
+This project consits of 315 soil samples collected by James Hutton Institute.
+
+-5 soil samples were collected from each farmland summing upto 315 in total.
+-Soil imaging were done under fixed laboratory conditions with fixed camera position and required lighting.
+- 
+
