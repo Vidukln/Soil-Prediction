@@ -23,5 +23,15 @@ This project consits of 315 soil samples collected by James Hutton Institute.
 1. Saturated soil sample
 2. 24 hours drained soil samples
 3. Oven dried soil samples
+
+## Algorithm Notes
+
+1. CNN
+2. VGG16
+3. ResNet
+4. DenseNet
+
+Models were trained considering both Mean Absolute Error and Mean Squared Error for evaluation of the model.
+
    
 
