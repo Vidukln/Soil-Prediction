@@ -7,7 +7,7 @@ patch_info = pd.read_csv("/content/drive/My Drive/Cropped Images/Patch_Info.csv"
 #Remove '.png' from 'Image' column in Patch_Info
 patch_info['Image'] = patch_info['Image'].str.replace('.png', '')
 
-#Merge the two dataframes on the 'Image' column
+#Merge the two dataframes 
 merged_data = pd.merge(patch_info, data_wsa, left_on='Image', right_on='ID', how='left')
 
 merged_data.drop(columns=['ID'], inplace=True)
@@ -30,7 +30,7 @@ merged_data = pd.read_csv("/content/drive/My Drive/Cropped Images/Merged_Patch_I
 #Get unique image names
 unique_images = merged_data['Image'].unique()
 
-#Split unique image names into training and validation sets
+#Split unique image names into training and validation sets(fieldwise seperation)
 train_images, val_images = train_test_split(unique_images, test_size=0.2, random_state=42)
 
 #Filter the dataset based on the training and validation image sets
