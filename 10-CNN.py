@@ -25,7 +25,7 @@ grouped_data = data.groupby('Field_ID')
 #Randomly shuffle the groups
 grouped_data = [group.sample(frac=1, random_state=42) for _, group in grouped_data]
 
-#Split the groups into training and validation sets (80-20 split)
+#Split the groups into training and validation sets 
 train_size = int(0.8 * len(grouped_data))
 train_data = pd.concat(grouped_data[:train_size])
 validation_data = pd.concat(grouped_data[train_size:])
